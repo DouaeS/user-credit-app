@@ -1,0 +1,29 @@
+<div class="pagination">
+  <div class="pagination-item-per-page">
+    <span>{{ 'items-per-page' | translate }}</span>
+    <select (change)="onSelectionChange($event.target.value)">
+      <option *ngFor="let option of itemsPerPageOptions" [value]="option">
+        {{ option }}
+      </option>
+    </select>
+  </div>
+  <div class="pagination-buttons">
+    <span class="pagination-status"
+      >{{ startIndex + 1 }} - {{ endIndex }} of {{ length }}</span
+    >
+    <button
+      (click)="goToPreviousPage()"
+      [disabled]="isPreviousButtonDisabled"
+      [class.disabled-button]="isPreviousButtonDisabled"
+    >
+      &lt;
+    </button>
+    <button
+      (click)="goToNextPage()"
+      [disabled]="isNextButtonDisabled"
+      [class.disabled-button]="isNextButtonDisabled"
+    >
+      &gt;
+    </button>
+  </div>
+</div>

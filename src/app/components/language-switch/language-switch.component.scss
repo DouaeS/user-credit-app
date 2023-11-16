@@ -1,0 +1,18 @@
+select {
+  margin: 2rem;
+  padding: 0.2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--secondary-color);
+  color: white;
+  border-radius: 3px;
+}
+@media (max-width: 344px) {
+  select {
+    right: unset;
+    top: unset;
+    bottom: 0;
+    left: 0;
+  }
+}

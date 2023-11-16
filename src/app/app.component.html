@@ -1,0 +1,24 @@
+<h1>{{ 'title' | translate }}</h1>
+<app-filter (inputChanged)="receiveInputData($event)"></app-filter>
+<app-toggle
+  [icon]="icon"
+  (themeChanged)="receiveToggledTheme($event)"
+></app-toggle>
+<app-language-switcher></app-language-switcher>
+<div
+  class="warning"
+  *ngIf="showErrorPage$ | async; else content"
+  class="warning"
+>
+  {{ 'warning' | translate | uppercase }}
+</div>
+<ng-template #content>
+  <spinner *ngIf="spinner$ | async"> </spinner>
+  <app-table
+    *ngIf="(tableDataSelector$ | async) && data?.length"
+    [rawData]="data"
+  ></app-table>
+  <div class="nodata" *ngIf="!data?.length && !(spinner$ | async)">
+    {{ 'no-data' | translate }}
+  </div>
+</ng-template>

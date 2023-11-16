@@ -1,0 +1,27 @@
+:root {
+  --primary-color: steelblue;
+  --secondary-color: #38678f;
+  --background-color: white;
+  --off-white: #cccccc;
+  --button-grey: lightgrey;
+  --text-color: black;
+  --background: white;
+  --svg-position-right: 0;
+  --svg-position-left: unset;
+  --svg-margin-right: 5px;
+  --svg-margin-left: 0px;
+}
+.dark-theme {
+  --primary-color: #ae5a3b;
+  --secondary-color: #e19f4d;
+  --background-color: #333;
+  --off-white: #cccccc;
+  --button-grey: rgb(169, 169, 169);
+  --text-color: #cccccc;
+  --background: #333;
+  background: #333;
+  --svg-position-right: unset;
+  --svg-position-left: 0;
+  --svg-margin-right: 0px;
+  --svg-margin-left: 5px;
+}

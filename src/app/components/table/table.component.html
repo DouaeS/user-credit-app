@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <th *ngFor="let header of headers" (click)="sort(header)">
+      <span>{{ header | translate }}</span>
+      <span
+        class="arrow-top"
+        [class.disabled]="sortKey !== header || sortOrder !== 'asc'"
+        >↑</span
+      >
+      <span
+        class="arrow-bottom"
+        [class.disabled]="sortKey !== header || sortOrder !== 'desc'"
+        >↓</span
+      >
+    </th>
+  </tr>
+  <tr *ngFor="let cellData of displayData">
+    <ng-container *ngFor="let header of headers">
+      <td>{{ cellData[header] }}</td>
+    </ng-container>
+  </tr>
+</table>
+<app-paginator
+  [childData]="rawData"
+  (paginatedData)="dataPerPage($event)"
+></app-paginator>

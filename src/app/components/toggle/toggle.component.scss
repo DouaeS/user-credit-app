@@ -1,0 +1,46 @@
+.toggle-container {
+  margin: 2rem;
+  width: 50px;
+  height: 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-color: var(--primary-color);
+  background-color: var(--secondary-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.toggle-handle {
+  width: 20px;
+  height: 20px;
+  background-color: var(--background);
+  border-radius: 50%;
+  margin: 2.5px;
+  transition: transform 0.3s;
+  position: absolute;
+  left: 0;
+  border-color: var(--primary-color);
+}
+svg {
+  position: absolute;
+  right: 0;
+  transition: transform 0.3s;
+  margin-right: 3px;
+  margin-top: 3px;
+}
+.toggle-container.checked .toggle-handle {
+  transform: translateX(25px);
+}
+.toggle-container.checked svg {
+  transform: translateX(-25px);
+  margin-right: 0px;
+}
+@media (max-width: 344px) {
+  .toggle-container {
+    left: unset;
+    top: unset;
+    bottom: 0;
+    right: 0;
+  }
+}

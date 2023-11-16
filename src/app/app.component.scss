@@ -1,0 +1,25 @@
+* {
+  font-family: Lato;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+}
+h1 {
+  text-align: center;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.warning,
+.nodata {
+  max-width: 600px;
+  height: 10rem;
+  border: 1px solid var(--secondary-color);
+  margin: 0 auto;
+}
+.warning {
+  color: red;
+  font-size: 20px;
+  text-align: center;
+  border: 3px solid red;
+}

@@ -1,0 +1,41 @@
+:host {
+  flex-direction: column;
+}
+table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: collapse;
+  border: 1px solid var(--secondary-color);
+  background: var(--background);
+}
+table th {
+  height: 54px;
+  font-weight: lighter;
+  text-align: center;
+  color: white;
+  border: 1px solid var(--secondary-color);
+  background: linear-gradient(
+    to bottom right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+}
+table tr {
+  color: var(--text-color);
+  border-bottom: 1px solid var(--off-white);
+}
+table td {
+  color: var(--text-color);
+  border-right: 1px solid var(--off-white);
+  padding: 10px;
+}
+.arrow-top {
+  font-size: 10px;
+  margin-left: 30px;
+}
+.arrow-bottom {
+  font-size: 10px;
+}
+.disabled {
+  opacity: 0.5;
+}

@@ -1,0 +1,9 @@
+{
+  "title": "User credit",
+  "warning": "Failed to Load the list",
+  "no-data": "Data not found",
+  "search": "Search Name",
+  "items-per-page": "items per page",
+  "user": "users",
+  "credit": "credits"
+}
